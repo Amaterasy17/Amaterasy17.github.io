@@ -53,6 +53,7 @@ nav
     width: 54%;
 }
 .search{
+    width: 50%;
     font-size: 15px;
     border-radius: 10px;
     border-style: solid;
@@ -61,6 +62,7 @@ nav
 }
 .button
 {
+    width: 30%;
     font-size: 15px;
     border-radius: 10px;
     border-style: solid;
@@ -84,6 +86,7 @@ nav
 }
 .Temperature
 {
+    margin-top: 5%;
     font-size:50px;
 }
 .type_of_weather
@@ -107,6 +110,7 @@ nav
     margin-left: 23%;
     margin-right: 23%;
     width: 54%;
+ 
 }
 .subcont{
     margin-top: 2%;

@@ -7,44 +7,45 @@
     <link rel="stylesheet" href="static/css/Styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="static/img/title.jpg">
     <title>Mickle Weather</title>
+    <script src="static/js/script.js"></script>
 </head>
-<body>
+<body onload="getCurrentWeather()">
    <nav class="size">
             <svg width="35" height="35" viewBox="5 5 35 35" class="img_pad"><path d="M5 40V5h35v35H5zm8.56-12.63c0 .56-.03.69-.32 1.03L10.8 31.4v.4h6.97v-.4L15.3 28.4c-.29-.34-.34-.5-.34-1.03v-8.95l6.13 13.36h.71l5.26-13.36v10.64c0 .3 0 .35-.19.53l-1.85 1.8v.4h9.2v-.4l-1.83-1.8c-.18-.18-.2-.24-.2-.53V15.94c0-.3.02-.35.2-.53l1.82-1.8v-.4h-6.47l-4.62 11.55-5.2-11.54h-6.8v.4l2.15 2.63c.24.3.29.37.29.77v10.35z"></path>
             </svg>
             <ul>
                <li><a href="#HOME_PAGE">Mickle Weather</a></li>
             </ul>
-            <form class="size_form">
-               <p><input type="search" class="search img_pad" placeholder="Введите город"> 
+            <form class="size_form" onsubmit="getCurrentWeather(); return false;">
+               <p><input type="search" id="search" class="search img_pad" placeholder="Введите город"> 
                <input type="submit" class="button img_pad" value="Поиск"></p>
             </form>
    </nav>
-   <div class="cont" style="background-image: url(static/img/sunny.jpg);">
-      <div class="city">Погода на сегодня в Москве</div>
+   <div class="cont" style="background-image: url(static/img/back.jpg);">
+      <div class="city" id="city">Погода на сегодня в Москве</div>
       <div class="subcont">
-         <div class="Temperature">+7</div>
-         <img src="static/img/title.jpg" class="img_float" width ="50px" height="50px">
+         <div class="Temperature" id="temperature">+7</div>
+         <img src="static/img/title.jpg" class="img_float"  id="picture">
          <div class="cont_in">
-            <div class="type_of_weather cont_in">Солнечно</div>
-            <div class="feeling cont_in">+2</div>
+            <div class="type_of_weather cont_in" id="type_of_weather">Солнечно</div>
+            <div class="feeling cont_in" id="feeling">+2</div>
          </div>
       </div>
-      <div class="cont_in_2">
+      <div class="cont_in_2" id="bar">
          Давление: 
       </div>
-      <div class="cont_in_2">
+      <div class="cont_in_2" id="vlaga">
          Влажность: 
       </div>
-      <div class="cont_in_2">
+      <div class="cont_in_2" id="wind">
          Ветер:
       </div>
       <div class="subcont">
          <div class="cont_bot">
-            <div class="cont_bot_in">Дата</div>
-            <div class="cont_bot_in">Время</div>
-            <div class="cont_bot_in">Температура</div>
-            <div class="cont_bot_in">состояние</div>
+            <div class="cont_bot_in" id="data">Дата</div>
+            <div class="cont_bot_in" id="time">Время</div>
+            <div class="cont_bot_in" id="temperature_now">Температура</div>
+            <div class="cont_bot_in" id="type">состояние</div>
          </div>
          <div class="cont_bot">
             <div class="cont_bot_in">Дата</div>
