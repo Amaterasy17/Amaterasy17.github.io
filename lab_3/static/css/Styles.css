@@ -159,7 +159,7 @@ nav
     }
     
     li {
-        font-size: 10px;
+        font-size: 8px;
         float: left;
     }
     
@@ -252,6 +252,8 @@ nav
     }
     .img_float
     {
+        width: 25px;
+        height: 25px;
         margin-left: 5%;
         float: left;
     }
@@ -261,6 +263,160 @@ nav
         margin-left: 23%;
         margin-right: 23%;
         width: 54%;
+     
+    }
+    .subcont{
+        margin-top: 2%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 2%;
+        display:flex;
+        color:white;
+    }
+    .cont_in
+    {
+        display: block;
+        margin-left: 10%;
+        font-size: 10px;
+    }
+    .cont_in_2
+    {
+        margin-top: 2%;
+        display: block;
+        margin-left: 10%;
+        font-size: 10px;
+        margin-bottom: 2%;
+    }
+    .cont_bot
+    {
+        margin-left: 10%;
+        margin-bottom: 5%;
+        display: block;
+        padding: 5px;
+        border-style: solid;
+        border-width: 1px;
+    }
+    .cont_bot_in
+    {
+        display: block;
+    }
+}
+@media (max-width: 350px)
+{
+    ul {
+        list-style-type: none;
+        margin-top: 0;
+        padding: 0;
+        overflow: hidden;
+        margin-block-start: 10px;
+        margin-block-end: 10px;
+    }
+    
+    li {
+        font-size: 6px;
+        float: left;
+    }
+    
+    li a {
+        display: block;
+        color: rgba(0, 0, 0, 0.54);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    
+    /* Change the link color to #111 (black) on hover */
+    li a:hover {
+        color:inherit;
+    }
+    .size{
+        width:70%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    nav
+    {
+        background-color: #79f3df;
+        margin-top: 20px;
+        padding-top: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 5px;
+        display: flex;
+        border: solid;
+        border-radius: 10px;
+        border-width: 1px;
+        border-color: blue;
+        justify-content: flex-start;
+    }
+    .container
+    {
+        color:white;
+        margin-left: 23%;
+        margin-right: 23%;
+        display:flex;
+        width: 54%;
+    }
+    .search{
+        width: 40%;
+        font-size: 4px;
+        border-radius: 3px;
+        border-style: solid;
+        border-color: rgb(29, 84, 156);
+        border-width: 1px;
+    }
+    .button
+    {
+        width: 20%;
+        font-size: 4px;
+        border-radius: 3px;
+        border-style: solid;
+        border-color: rgb(29, 84, 156);
+        border-width: 1px;
+    }
+    .size_form
+    {
+        margin-left: 45%;
+    }
+    .img_pad
+    {
+        margin-block-start: 10px;
+        margin-block-end: 10px;
+    }
+    .city
+    {
+        margin-left: 10%;
+        margin-top: 2%;
+        font-size: 10px;
+    }
+    .Temperature
+    {
+        margin-top: 5%;
+        font-size:15px;
+    }
+    .type_of_weather
+    {
+        font-size: 10px;
+        margin-left: 10%;
+    }
+    .feeling
+    {
+        font-size: 12px;
+        margin-left: 10%;
+    }
+    .img_float
+    {
+        width: 25px;
+        height: 25px;
+        margin-left: 5%;
+        float: left;
+    }
+    .cont{
+        display: block;
+        color:white;
+        margin-left: 20%;
+        margin-right: 20%;
+        width: 60%;
      
     }
     .subcont{
