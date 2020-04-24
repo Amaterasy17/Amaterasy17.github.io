@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="static/css/Styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="static/img/title.jpg">
     <title>Registration</title>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
     <script src="static/js/script.js"></script>
 </head>
 <body>
@@ -17,10 +20,10 @@
    <form>
    
       <div class="cont field">
-         <label for="nickname">NickName</label><input type="text" id="nickname" required class="field2">
+         <label for="nickname">NickName (Only English)</label><input type="text" id="nickname" required class="field2" pattern="[A-Za-z]+">
       </div>
       <div class="cont field">
-         <label for="email">Email</label><input type="text" id="email" required class="field2">
+         <label for="number">Number (Only English)</label><input type="text" id="number" required class="field2">
       </div>
       <div class="cont field">
       <label for="password">Password</label><input type="password" id="password" required class="field2">
@@ -28,6 +31,7 @@
       <div class="cont field">
          <label for="rep_password">Repeat Password</label><input type="password" id="rep_password" required class="field2">
       </div>
+
       <div class="cont field">
          <label>Прикрепить файлы:</label>
          <input name="file[]" value="1" size="50" type="file"/>
@@ -36,6 +40,14 @@
     
    </form>
  </div>
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<!-- Initialize Firebase -->
+
 </body>
 
 

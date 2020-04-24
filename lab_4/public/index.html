@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/Styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="static/img/title.jpg">
+    <title>Registration</title>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0.js"> </script>
+    <script src="static/js/script.js"></script>
+    <script src="jquery.maskedinput.js"></script>
+    <script>
+      $(function(){
+          $("#number").mask("+7(999) 999-9999");
+      });
+  </script>
+
+</head>
+<body>
+   <div class="container">
+      <p>Registration</p>
+   </div>
+ <div class="container2">
+   <form onsubmit="SendToDB(); return false;">
+   
+      <div class="cont field">
+         <label for="nickname">NickName (Only English)</label><input type="text" id="nickname" required class="field2" pattern="[A-Za-z]+">
+      </div>
+      <div class="cont field">
+         <label for="number">Number</label><input type="text" id="number" required class="field2">
+      </div>
+      <div class="cont field">
+      <label for="password">Password</label><input type="password" id="password" required class="field2">
+      </div>
+      <div class="cont field">
+         <label for="rep_password">Repeat Password</label><input type="password" id="rep_password" required class="field2">
+         <div id ="error"></div>
+      </div>
+      <div class="cont field">
+         <label>Прикрепить файлы:</label>
+         <input name="file[]" value="1" size="50" type="file" id="file"/>
+      </div>
+      <button type="submit" class="button" id="submit">Зарегистрироваться</button> 
+    
+   </form>
+ </div>
+ <script>
+   $("#rep_password").on("keyup", function() { // Выполняем скрипт при изменении содержимого 2-го поля
+   let pasw =  $("#password").val();
+   let cor_pasw = $(this).val();
+   if(pasw != cor_pasw) { // Условие, если поля не совпадают
+   $("#error").html("Пароли не совпадают!"); // Выводим сообщение
+   $(".button").attr("disabled", "disabled"); // Запрещаем отправку формы
+   } else { // Условие, если поля совпадают
+   $(".button").removeAttr("disabled"); // Разрешаем отправку формы
+   $("#error").html(""); // Скрываем сообщение
+   }
+   });
+   </script>
+
+</body>
+
+
+</html>
