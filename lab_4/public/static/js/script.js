@@ -20,7 +20,7 @@ function SendToDB() {
         if (error) {
             alert("Error!!! Server is down, may be sigfoult)))) или данные введены неверно!")
         } else {
-            alert("Спасибо за регистрацию!) Данные отправлены успешно!")
+            alert("Спасибо за регистрацию!");
             nickname.value=null;
             number.value=null;
             password.value=null;
